@@ -1,1 +1,1 @@
-<h1 align="center">Furniture</h1>
+<h1 align="center">FurniShop</h1>

@@ -2,7 +2,7 @@
 
 <p align="center">Aqui você encontra sua nova imobiliária para sua casa dos sonhos.</p>
 
-<img src="../Furniture/assets/svg/Furniture-Web.jpg" width="600">
+<img src="../Furniture/assets/svg/Furniture-Web.jpg" width="620">
 
 ---
 

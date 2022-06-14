@@ -1,14 +1,14 @@
 <h1 align="center">FurniShop</h1>
 
-<p align="center">Aqui você encontra sua nova imobiliária para sua casa dos sonhos.</p>
+<p align="center">Here you find your new real estate for your dream home.</p>
 
 <h4 align="center"> 
-	🚧  FurniShop 🏠 Em construção...  🚧
+	🚧  FurniShop 🏠 Under construction ...  🚧
 </h4>
 
-### 🛠 Tecnologias
+### 🛠 Technologies
 
-As seguintes ferramentas foram usadas na construção do projeto:
+The following tools were used in building the project:
 
 - [HTML5](https://www.w3schools.com/html/)
 - [CSS3](https://www.w3schools.com/css/)

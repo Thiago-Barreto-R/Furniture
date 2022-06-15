@@ -1,0 +1,94 @@
+.header {
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &.scroll {
+        background-color: rgba(0, 0, 0, 0.2);
+        box-shadow: 0 .5rem 2rem 0 rgba(35, 38, 135, 0.10);
+        backdrop-filter: blur(1.25rem);
+        transition: ease-in-out;
+    }
+
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 8.4375rem;
+        width: 100%;
+        max-width: 90rem;
+
+        .nav-logo {
+            width: 40px;
+            height: 40px;
+            text-align: center;
+        }
+        
+        .nav-logo-text {
+            font-size: 1.125rem;
+            font-weight: var(--font-bold);
+            line-height: 40px;
+        }
+        
+        .menu {
+            display: flex;
+        }
+        
+        .nav-list {
+            display: flex;
+            gap: 3rem;
+            
+            .nav-link {
+                position: relative;
+                transition: .4s ease-in-out;
+                
+                &.active-link::before {
+                    position: absolute;
+                    content: '';
+                    width: 100%;
+                    height: 2px;
+                    left: 0;
+                    bottom: 0;
+                    background-color: var(--skin-color);
+                }
+                &:hover::after {
+                    width: 100%;
+                }
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 0%;
+                    height: 2px;
+                    left: 50%;
+                    bottom: 0;
+                    transform: translateX(-50%);    
+                    background-color: red;
+                    transition: .3s ease-in-out;
+                }
+            }
+        }
+
+        .mobile-menu {
+            cursor: pointer;
+            display: none;
+            margin-top: .8rem;
+        }
+
+        .line1, .line2, .line3{
+            background-color: white;
+            width: 32px;
+            height: 2px;
+            margin: 8px 0;
+            transition: .3s ease-in-out;
+        }
+
+        .line2 {
+            width: 22px;
+            margin-left: .58rem;
+        }
+    }
+}

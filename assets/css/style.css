@@ -1,0 +1,228 @@
+:root {
+  /*===== Colors =====*/
+  --hue-color:242;
+  /* HSL Color Mode */
+  --skin-color: hsl(342, 92%, 46%);
+  --title-color: hsl(var(--hue-color), 8%, 95%);
+  --text-color: #000;
+  --body-color: hsl(var(--hue-color), 19%, 95%);
+  --box-color: hsl(var(--hue-color), 14%, 10%);
+  --scroll-bar-color: hsl(var(--hue-color), 12%, 38%);
+  --scroll-thumb-color: hsl(var(--hue-color), 12%, 26%);
+  /*===== Font and Typography =====*/
+  --body-font: "Poppins", sans-serif;
+  /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
+  --biggest-font-size: 3rem;
+  --h1-font-size: 2.25rem;
+  --h2-font-size: 1.5rem;
+  --h3-font-size: 1.25rem;
+  --normal-font-size: 1rem;
+  --small-font-size: .875rem;
+  --smaller-font-size: .813rem;
+  /*===== Font Weight =====*/
+  --font-medium: 500;
+  --font-bold: 600;
+  /*===== Margenes Bottom =====*/
+  --mb-0-25: .25rem;
+  --mb-0-5: .5rem;
+  --mb-0-75: .75rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+  --mb-3: 3rem;
+  /*===== Z Index =====*/
+  --z-fixed: 10;
+  --z-modal: 100;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Saira", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+section {
+  width: 90%;
+  height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  max-width: 1440px;
+  padding: 0 8.375rem;
+}
+
+.header.scroll .nav-link {
+  color: #fff;
+}
+
+header.scroll ul li a {
+  color: white;
+}
+
+@media (max-width: 1300px) {
+  .mobile-menu {
+    display: block;
+    position: absolute;
+    right: 1rem;
+    top: 0.2rem;
+    z-index: 12;
+  }
+
+  .mobile-menu.show .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+  }
+
+  .mobile-menu.show .line2 {
+    opacity: 0;
+  }
+
+  .mobile-menu.show .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+  }
+
+  .nav-list {
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.8rem;
+    background-color: royalblue;
+    transform: translateX(100%);
+    transition: transform 0.6s ease-in-out;
+  }
+
+  .nav-item:first-child {
+    margin-top: 6rem;
+  }
+
+  .nav-list.show {
+    transform: translateX(0);
+  }
+}
+.header {
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header.scroll {
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.5rem 2rem 0 rgba(35, 38, 135, 0.1);
+  backdrop-filter: blur(1.25rem);
+  transition: ease-in-out;
+}
+.header .nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 8.4375rem;
+  width: 100%;
+  max-width: 90rem;
+}
+.header .nav .nav-logo {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+}
+.header .nav .nav-logo-text {
+  font-size: 1.125rem;
+  font-weight: var(--font-bold);
+  line-height: 40px;
+}
+.header .nav .menu {
+  display: flex;
+}
+.header .nav .nav-list {
+  display: flex;
+  gap: 3rem;
+}
+.header .nav .nav-list .nav-link {
+  position: relative;
+  transition: 0.4s ease-in-out;
+}
+.header .nav .nav-list .nav-link.active-link::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background-color: var(--skin-color);
+}
+.header .nav .nav-list .nav-link:hover::after {
+  width: 100%;
+}
+.header .nav .nav-list .nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  background-color: red;
+  transition: 0.3s ease-in-out;
+}
+.header .nav .mobile-menu {
+  cursor: pointer;
+  display: none;
+  margin-top: 0.8rem;
+}
+.header .nav .line1, .header .nav .line2, .header .nav .line3 {
+  background-color: white;
+  width: 32px;
+  height: 2px;
+  margin: 8px 0;
+  transition: 0.3s ease-in-out;
+}
+.header .nav .line2 {
+  width: 22px;
+  margin-left: 0.58rem;
+}
+
+.home {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 4rem;
+}
+.home::after {
+  top: 0;
+  left: 0;
+  background-image: url(../svg/Group\ 6356097.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+}
+
+/*# sourceMappingURL=style.css.map */

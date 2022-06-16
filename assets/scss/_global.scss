@@ -1,48 +1,3 @@
-
-:root {
-    /*===== Colors =====*/
-    --hue-color:242;
-
-    /* HSL Color Mode */
-    --skin-color: hsl(342, 92%, 46%);
-    --title-color: hsl(var(--hue-color), 8%, 95%);
-    --text-color: #000;
-    --body-color: hsl(var(--hue-color), 19%, 95%);
-    --box-color: hsl(var(--hue-color), 14%, 10%);
-    --scroll-bar-color: hsl(var(--hue-color), 12%, 38%);
-    --scroll-thumb-color: hsl(var(--hue-color), 12%, 26%);
-
-    /*===== Font and Typography =====*/
-    --body-font: 'Poppins', sans-serif;
-
-    /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
-    --biggest-font-size: 3rem;
-    --h1-font-size: 2.25rem;
-    --h2-font-size: 1.5rem;
-    --h3-font-size: 1.25rem;
-    --normal-font-size: 1rem;
-    --small-font-size: .875rem;
-    --smaller-font-size: .813rem;
-
-    /*===== Font Weight =====*/
-    --font-medium: 500;
-    --font-bold: 600;
-
-    /*===== Margenes Bottom =====*/
-    --mb-0-25: .25rem;
-    --mb-0-5: .5rem;
-    --mb-0-75: .75rem;
-    --mb-1: 1rem;
-    --mb-1-5: 1.5rem;
-    --mb-2: 2rem;
-    --mb-2-5: 2.5rem;
-    --mb-3: 3rem;
-
-    /*===== Z Index =====*/
-    --z-fixed: 10;
-    --z-modal: 100;
-}
-
 * {
     padding: 0;
     margin: 0;
@@ -50,6 +5,7 @@
 }
 body {
     font-family: 'Saira', sans-serif;
+    overflow-x: hidden;
 }
 
 ul {
@@ -67,57 +23,19 @@ a {
 }
 
 .wrapper {
-    width: 100%;
-    height: 100%;
     max-width: 1440px;
     padding: 0 8.375rem;
+}
+
+
+
+header.scroll {
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 .5rem 2rem 0 rgba(35, 38, 135, 0.10);
+    backdrop-filter: blur(1.25rem);
+    transition: linear;
 }
 
 .header.scroll .nav-link {
     color: #fff;
 }
-header.scroll ul li a{
-    color: white;
-}
-
-
-@media (max-width: 1300px) {
-    .mobile-menu {
-        display: block;
-        position: absolute;
-        right: 1rem;
-        top: .2rem;
-        z-index: 12;
-    }
-    .mobile-menu.show .line1 {
-        transform: rotate(-45deg) translate(-8px, 8px);
-    }
-    .mobile-menu.show .line2 {
-        opacity: 0;
-    }
-    .mobile-menu.show .line3 {
-        transform: rotate(45deg) translate(-5px, -7px);
-    }
-    .nav-list {   
-        position: absolute;
-        overflow: hidden;
-        top: 0;
-        right: 0;
-        width: 40%;
-        height: 100vh;
-        flex-direction: column;
-        align-items: center;
-        font-size: 1.8rem;
-        background-color: royalblue;
-        transform: translateX(100%);
-        transition: transform .6s ease-in-out;
-    }
-    .nav-item:first-child {
-        margin-top: 6rem;
-    }
-
-    .nav-list.show {
-        transform: translateX(0);
-    }
-}
-

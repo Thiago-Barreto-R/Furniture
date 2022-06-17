@@ -3,18 +3,19 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Saira', sans-serif;
     overflow-x: hidden;
+    height: 100vh;
 }
 
 ul {
     list-style: none;
-}
-
-section {
-    width: 90%;
-    height: 100vh;
 }
 
 a {
@@ -22,18 +23,10 @@ a {
     color: #fff;
 }
 
-.wrapper {
-    max-width: 1440px;
-    padding: 0 8.375rem;
-}
-
-
-
 header.scroll {
     background-color: rgba(0, 0, 0, 0.2);
     box-shadow: 0 .5rem 2rem 0 rgba(35, 38, 135, 0.10);
     backdrop-filter: blur(1.25rem);
-    transition: linear;
 }
 
 .header.scroll .nav-link {

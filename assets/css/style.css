@@ -12,18 +12,18 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Saira", sans-serif;
   overflow-x: hidden;
+  height: 100vh;
 }
 
 ul {
   list-style: none;
-}
-
-section {
-  width: 90%;
-  height: 100vh;
 }
 
 a {
@@ -31,16 +31,10 @@ a {
   color: #fff;
 }
 
-.wrapper {
-  max-width: 1440px;
-  padding: 0 8.375rem;
-}
-
 header.scroll {
   background-color: rgba(0, 0, 0, 0.2);
   box-shadow: 0 0.5rem 2rem 0 rgba(35, 38, 135, 0.1);
   backdrop-filter: blur(1.25rem);
-  transition: linear;
 }
 
 .header.scroll .nav-link {
@@ -119,7 +113,7 @@ header.scroll {
 }
 .header .nav .line2 {
   width: 22px;
-  margin-left: 0.58rem;
+  margin-left: 9.28px;
 }
 
 @media (max-width: 950px) {
@@ -129,6 +123,12 @@ header.scroll {
     right: 5%;
     top: 0.2rem;
     z-index: 12;
+  }
+  .header .nav .mobile-menu .line1, .header .nav .mobile-menu .line3 {
+    transition: 0.3s ease-in-out;
+  }
+  .header .nav .mobile-menu div {
+    border-radius: 1rem;
   }
   .header .nav .mobile-menu.show .line1 {
     transform: rotate(-45deg) translate(-8px, 8px);
@@ -144,75 +144,76 @@ header.scroll {
     overflow: hidden;
     top: 0;
     right: 0;
-    width: 60vw;
+    width: 70vw;
     height: 100vh;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     font-size: 1.8rem;
-    background-color: var(--blue-bg);
+    background-color: var(--gray-bg);
     transform: translateX(100%);
     transition: transform 0.6s ease-in-out;
   }
   .header .nav .nav-item:first-child {
-    margin-top: 6rem;
+    margin-top: 3rem;
   }
   .header .nav .nav-list.show {
     transform: translateX(0);
   }
 }
 .home {
-  position: relative;
   width: 100%;
-  height: 136vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 0;
+  max-width: 1440px;
+  margin: 0 auto;
+  position: relative;
+  height: 850px;
 }
 .home .img {
-  content: "";
   position: absolute;
-  top: 0;
-  left: 0;
+  height: 850px;
   width: 100%;
-  height: 100%;
-  z-index: -1;
   background-image: url(../svg/home2.svg);
   background-repeat: no-repeat;
   background-size: cover;
+  z-index: -1;
+  top: 0;
 }
 .home .home-text {
-  width: 100%;
-  color: var(--white-bg);
   display: flex;
+  place-content: center;
   flex-direction: column;
-  align-items: center;
   text-align: center;
+  padding: 10.875rem 0;
+  gap: 2rem;
+  color: var(--white-bg);
 }
 .home .home-text h1 {
   font-size: 4rem;
-  font-weight: 500;
-  line-height: 4.875rem;
-  margin-top: -11rem;
 }
 .home .home-text p {
   font-size: 1.25rem;
-  line-height: 1.875rem;
-  width: 55%;
+}
+.home .home-text .button {
+  background-color: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(0.55rem);
+  display: inline-block;
+  padding: 1rem 5rem;
+  border-radius: 0.6rem;
 }
 
 .about {
   width: 100%;
-  height: 100vh;
+  max-width: 1440px;
+  margin: 0 auto;
+  position: relative;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
+  place-content: center;
 }
 .about .cards {
   width: 90%;
-  padding: 4rem 0;
+  max-width: 1440px;
+  padding: 3rem 4rem;
   color: var(--white-bg);
   display: flex;
   justify-content: space-around;
@@ -220,25 +221,30 @@ header.scroll {
   text-align: center;
   background-color: var(--green-bg);
   border-radius: 1rem;
-  position: relative;
-  top: -19.8rem;
   box-shadow: 0 160px 50px 120px white;
-}
-.about .cards::after {
-  z-index: -1;
-  content: "";
   position: absolute;
-  top: 0;
-  left: -4.2rem;
-  width: 111.2%;
-  height: 11.5rem;
-  display: block;
+  top: -6.5rem;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .about .cards .line {
   display: flex;
-  width: 2px;
-  height: 100%;
+  width: 1px;
+  height: 6rem;
   background-color: var(--white-bg);
+}
+
+@media (max-width: 950px) {
+  .home img {
+    transform: scale(100%);
+    position: fixed;
+  }
+  .home .home-text h1 {
+    font-size: 2rem;
+  }
+  .home .home-text p {
+    font-size: 0.8rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -29,3 +29,5 @@ Feito com :heart: por Thiago Barreto
 
 [![Linkedin Badge](https://img.shields.io/badge/-Thiago_Rodrigues-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/thiago-barreto-rodrigues/)](https://www.linkedin.com/in/thiago-barreto-rodrigues/) 
 [![Gmail Badge](https://img.shields.io/badge/-tbarreto585@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:tbarreto585@gmail.com)](mailto:tbarreto585@gmail.com)
+
+[Link para o site](https://thiago-barreto-r.github.io/Furniture/)

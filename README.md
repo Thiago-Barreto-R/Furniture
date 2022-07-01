@@ -1,8 +1,8 @@
 <h1 align="center">FurniShop</h1>
 
-<p align="center">Aqui você encontra sua nova imobiliária para sua casa dos sonhos.</p>
+<p align="center">Aqui você encontra sua casa dos sonhos ou por ela a venda.</p>
 
-<img src="assets/svg/Furniture-Web.jpg" width="620">
+<img src="assets/svg/Hero.svg">
 
 ---
 
@@ -12,7 +12,7 @@
 
 ### 🛠 Tecnologias
 
-As seguintes ferramentas foram usadas na construção do projeto:
+As seguintes ferramentas estão sendo ultilizadas na construção do projeto:
 
 - [HTML5](https://www.w3schools.com/html/)
 - [CSS3](https://www.w3schools.com/css/)
@@ -21,7 +21,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 ---
 ## Autor
 
-<img src="https://raw.githubusercontent.com/gist/Thiago-Barreto-R/0205c7f3bd8da20437c602d1806acf14/raw/4838ff7a6a278d981ae6e1bb747b0f3b56e84dc7/FotoOfc.svg" width="100">
+<img src="https://raw.githubusercontent.com/gist/Thiago-Barreto-R/0205c7f3bd8da20437c602d1806acf14/raw/4838ff7a6a278d981ae6e1bb747b0f3b56e84dc7/FotoOfc.svg" width="150">
 
 ## Thiago Barreto Rodrigues
 

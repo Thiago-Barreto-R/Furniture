@@ -172,7 +172,7 @@ header.scroll {
   position: absolute;
   height: 850px;
   width: 100%;
-  background-image: url(../svg/home2.svg);
+  background-image: url(../svg/home-one.svg);
   background-repeat: no-repeat;
   background-size: cover;
   z-index: -1;
